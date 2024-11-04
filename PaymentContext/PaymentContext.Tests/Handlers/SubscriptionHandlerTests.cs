@@ -19,7 +19,7 @@ namespace PaymentContext.Tests.Handlers
             var command = new CreateBoletoSubscriptionCommand();
             command.FirstName = "Bruce";
             command.LastName = "Wayne";
-            command.Document = "12399999999999";
+            command.Document = "99999999999";
             command.Email = "email@email.com";
             command.BarCode = "123456789";
             command.BoletoNumber = "1234654987";

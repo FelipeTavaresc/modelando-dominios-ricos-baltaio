@@ -1,7 +1,4 @@
-using System.Data;
 using PaymentContext.Domain.Commands;
-using PaymentContext.Domain.Enums;
-using PaymentContext.Domain.ValueObjects;
 
 namespace PaymentContext.Tests
 {

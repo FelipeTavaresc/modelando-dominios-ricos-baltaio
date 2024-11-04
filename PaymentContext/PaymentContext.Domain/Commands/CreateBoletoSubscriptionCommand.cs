@@ -23,7 +23,7 @@ namespace PaymentContext.Domain.Commands
         public string Payer { get; set; }
         public string PayerDocument { get; set; }
         public EDocumentType PayerDocumentType { get; set; }
-        public string PayerEmail { get; private set; }
+        public string PayerEmail { get; set; }
         public string Street { get; set; }
         public string Number { get; set; }
         public string Neighborhood { get; set; }

@@ -23,7 +23,7 @@ namespace PaymentContext.Domain.Handler
             _emailService = emailService;
         }
 
-        public ICommandResult Handler(CreateBoletoSubscriptionCommand command)
+        public ICommandResult Handle(CreateBoletoSubscriptionCommand command)
         {
             command.Validate();
             if (command.Invalid)
@@ -70,6 +70,9 @@ namespace PaymentContext.Domain.Handler
             student.AddSubscription(subscription);
 
             AddNotifications(name, document, email, address, student, subscription, payment);
+
+            if(Invalid)
+                return new CommandResult(false, "Não foi possível realizar a assinatura");
 
             _repository.CreateSubscription(student);
 
